@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="#00050A"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_main_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_main_footer_new"
+            style="@style/MainFooterButton"
+            android:checked="true"
+            android:drawableTop="@drawable/main_footer_new_selector"
+            android:text="消息" />
+
+        <RadioButton
+            android:id="@+id/rb_main_footer_lacation"
+            style="@style/MainFooterButton"
+            android:drawableTop="@drawable/main_footer_lacation_selector"
+            android:text="附近" />
+
+        <RadioButton
+            android:id="@+id/rb_main_footer_contacts"
+            style="@style/MainFooterButton"
+            android:drawableTop="@drawable/main_footer_contacts_selector"
+            android:text="联系人" />
+
+
+        <RadioButton
+            android:id="@+id/rb_main_footer_me"
+            style="@style/MainFooterButton"
+            android:drawableTop="@drawable/main_footer_me_selector"
+            android:text="个人中心" />
+    </RadioGroup>
+
+</LinearLayout>

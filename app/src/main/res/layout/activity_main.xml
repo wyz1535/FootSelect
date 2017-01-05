@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <include layout="@layout/head_main" />
+
+    <FrameLayout
+        android:id="@+id/fragment_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></FrameLayout>
+
+    <include layout="@layout/footer_main" />
+
+    <!--activity中放置多个fragment-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<fragment-->
+    <!--android:id="@+id/fg_001"-->
+    <!--android:name="com.leyifu.footselect.fragment.ContactsFragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--tools:layout="@layout/fragment_contacts" />-->
+
+    <!--<fragment-->
+    <!--android:id="@+id/fg_002"-->
+    <!--android:name="com.leyifu.footselect.fragment.LacationFragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--tools:layout="@layout/fragment_lacation" />-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>
