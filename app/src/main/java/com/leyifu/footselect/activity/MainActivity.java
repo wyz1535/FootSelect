@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 mExitTime = System.currentTimeMillis();
 
             } else {
+
                 finish();
             }
             return true;
@@ -104,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 适配MIUI沉浸状态栏
+     * 适配沉浸状态栏
      */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void handleMaterialStatusBar() {
