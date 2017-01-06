@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     //点击返回两次确认退出
+
     private long mExitTime;
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -96,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
                 mExitTime = System.currentTimeMillis();
 
             } else {
-
                 finish();
             }
             return true;
