@@ -2,14 +2,13 @@ package com.leyifu.footselect.activity;
 
 import android.annotation.TargetApi;
 import android.app.Fragment;
-import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,17 +26,28 @@ public class MainActivity extends AppCompatActivity {
 
     private RadioGroup rg_main_footer;
     private List<Fragment> fragments = new ArrayList<>();
-    private FragmentManager fragmentManager;
+    private android.app.FragmentManager fragmentManager;
     private TextView tv_head_main;
+    private Fragment currentFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rg_main_footer = ((RadioGroup) findViewById(R.id.rg_main_footer));
+//      初始化UI
+        initUI();
+//      初始化数据
+        initDate();
+
+        //配MIUI沉浸状态栏
+        handleMaterialStatusBar();
+
+    }
+
+    private void initDate() {
+
         rg_main_footer.setOnCheckedChangeListener(checkChangeListener);
-        ((RadioButton) rg_main_footer.getChildAt(0)).setChecked(true);
 
         fragments.add(new NewsFragment());
         fragments.add(new LacationFragment());
@@ -45,20 +55,18 @@ public class MainActivity extends AppCompatActivity {
         fragments.add(new MeFragment());
 
         fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.fragment_main,fragments.get(0)).commit();
-
-        //配MIUI沉浸状态栏
-        handleMaterialStatusBar();
-
-        //初始化UI
-        initUI();
+        if (!fragments.get(0).isAdded()) {
+            fragmentManager.beginTransaction().add(R.id.fragment_main, fragments.get(0)).commit();
+            currentFragment = fragments.get(0);
+        }
 
         tv_head_main.setText("消息");
-
     }
 
     private void initUI() {
         tv_head_main = ((TextView) findViewById(R.id.tv_head_main));
+        rg_main_footer = ((RadioGroup) findViewById(R.id.rg_main_footer));
+
     }
 
     RadioGroup.OnCheckedChangeListener checkChangeListener = new RadioGroup.OnCheckedChangeListener() {
@@ -66,27 +74,36 @@ public class MainActivity extends AppCompatActivity {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
             switch (checkedId) {
                 case R.id.rb_main_footer_new:
-                    fragmentManager.beginTransaction().replace(R.id.fragment_main, fragments.get(0)).commit();
+                    addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(0));
                     tv_head_main.setText("消息");
                     break;
                 case R.id.rb_main_footer_lacation:
-                    fragmentManager.beginTransaction().replace(R.id.fragment_main, fragments.get(1)).commit();
+                    addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(1));
                     tv_head_main.setText("附近");
                     break;
                 case R.id.rb_main_footer_contacts:
-                    fragmentManager.beginTransaction().replace(R.id.fragment_main, fragments.get(2)).commit();
+                    addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(2));
                     tv_head_main.setText("联系人");
                     break;
                 case R.id.rb_main_footer_me:
-                    fragmentManager.beginTransaction().replace(R.id.fragment_main, fragments.get(3)).commit();
+                    addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(3));
                     tv_head_main.setText("个人中心");
                     break;
             }
         }
+
+        private void addOrShowFragment(FragmentTransaction fragmentTransaction, Fragment fragment) {
+            if (currentFragment == fragment) return;
+            if (!fragment.isAdded()) {
+                fragmentTransaction.hide(currentFragment).add(R.id.fragment_main, fragment).commit();
+            } else {
+                fragmentTransaction.hide(currentFragment).show(fragment).commit();
+            }
+            currentFragment = fragment;
+        }
     };
 
     //点击返回两次确认退出
-
     private long mExitTime;
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -118,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 
-        window.setStatusBarColor(0xff75B8F8);
+        window.setStatusBarColor(getResources().getColor(R.color.statusBar));
 
     }
 }

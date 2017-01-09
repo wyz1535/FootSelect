@@ -20,4 +20,5 @@ public class LacationFragment extends Fragment {
         View inflate = inflater.inflate(R.layout.fragment_lacation, container,false);
         return inflate;
     }
+
 }

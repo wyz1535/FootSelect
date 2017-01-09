@@ -2,7 +2,7 @@ package com.leyifu.footselect.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +14,15 @@ import com.leyifu.footselect.R;
  */
 public class NewsFragment extends Fragment {
 
-    @Nullable
+    private final String TAG = "mainactivity";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.e(TAG, "onCreateView");
         View inflate = inflater.inflate(R.layout.fragment_news, container,false);
         return inflate;
     }
+
+
+
 }
