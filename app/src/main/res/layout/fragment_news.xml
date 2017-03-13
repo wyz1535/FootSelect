@@ -6,6 +6,9 @@
     android:orientation="vertical">
 
     <ImageView
+        android:clickable="true"
+        android:onClick="newsText"
+        android:id="@+id/iv_news_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher" />
@@ -17,20 +20,21 @@
 
     <fragment
         android:id="@+id/fm_lacation"
+        android:name="com.leyifu.makefriend.fragment.LacationFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:name="com.leyifu.footselect.fragment.LacationFragment"
-        tools:layout="@layout/fragment_lacation"
-        />
+         />
+    <!--tools:layout="@layout/fragment_lacation"-->
 
     <fragment
         android:id="@+id/fm_me"
+        android:name="com.leyifu.makefriend.fragment.MeFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.leyifu.footselect.fragment.MeFragment"
-        tools:layout="@layout/fragment_me"
-        />
+        android:layout_weight="1"
+         />
+    <!--tools:layout="@layout/fragment_me"-->
 
 
 </LinearLayout>

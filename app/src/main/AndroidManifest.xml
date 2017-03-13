@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.leyifu.footselect">
-
+    package="com.leyifu.makefriend">
 
     <application
         android:allowBackup="true"
@@ -21,6 +20,11 @@
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LandAndRegistActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.RegistActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
-
 </manifest>

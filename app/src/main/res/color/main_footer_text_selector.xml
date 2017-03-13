@@ -4,4 +4,6 @@
     <item android:color="#fff" android:state_checked="true" />
     <item android:color="#828282" android:state_checked="false" />
 
+
+
 </selector>

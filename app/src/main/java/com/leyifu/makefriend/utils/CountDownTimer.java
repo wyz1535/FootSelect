@@ -1,4 +1,4 @@
-package com.leyifu.footselect.utils;
+package com.leyifu.makefriend.utils;
 
 /*
  * Copyright (C) 2008 The Android Open Source Project

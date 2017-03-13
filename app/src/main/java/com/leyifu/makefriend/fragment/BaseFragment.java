@@ -1,8 +1,7 @@
-package com.leyifu.footselect.fragment;
+package com.leyifu.makefriend.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,14 +11,13 @@ import android.view.ViewGroup;
  */
 public abstract class BaseFragment extends Fragment {
 
-    private int resourcesLayout;
-
-    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        inflater.inflate(getResourcesLayout(), null);
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(getResourcesLayout(), container,false);
+        init(view);
+        return view;
     }
 
+    protected abstract void init(View view);
     public abstract int getResourcesLayout();
 }

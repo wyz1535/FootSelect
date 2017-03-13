@@ -1,34 +1,30 @@
-package com.leyifu.footselect.activity;
+package com.leyifu.makefriend.activity;
 
-import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.leyifu.footselect.R;
-import com.leyifu.footselect.fragment.ContactsFragment;
-import com.leyifu.footselect.fragment.LacationFragment;
-import com.leyifu.footselect.fragment.MeFragment;
-import com.leyifu.footselect.fragment.NewsFragment;
+import com.leyifu.makefriend.R;
+import com.leyifu.makefriend.fragment.ContactsFragment;
+import com.leyifu.makefriend.fragment.LacationFragment;
+import com.leyifu.makefriend.fragment.MeFragment;
+import com.leyifu.makefriend.fragment.NewsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private RadioGroup rg_main_footer;
     private List<Fragment> fragments = new ArrayList<>();
     private android.app.FragmentManager fragmentManager;
     private TextView tv_head_main;
     private Fragment currentFragment;
+//    private String[] radioText= new String[]{"消息","附近","联系人","个人中心",};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         initDate();
 
         //配MIUI沉浸状态栏
-        handleMaterialStatusBar();
 
     }
 
@@ -59,8 +54,7 @@ public class MainActivity extends AppCompatActivity {
             fragmentManager.beginTransaction().add(R.id.fragment_main, fragments.get(0)).commit();
             currentFragment = fragments.get(0);
         }
-
-        tv_head_main.setText("消息");
+        tv_head_main.setText(getResources().getString(R.string.radioNews));
     }
 
     private void initUI() {
@@ -75,19 +69,19 @@ public class MainActivity extends AppCompatActivity {
             switch (checkedId) {
                 case R.id.rb_main_footer_new:
                     addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(0));
-                    tv_head_main.setText("消息");
+                    tv_head_main.setText(getResources().getString(R.string.radioNews));
                     break;
                 case R.id.rb_main_footer_lacation:
                     addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(1));
-                    tv_head_main.setText("附近");
+                    tv_head_main.setText(getResources().getString(R.string.radioLacation));
                     break;
                 case R.id.rb_main_footer_contacts:
                     addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(2));
-                    tv_head_main.setText("联系人");
+                    tv_head_main.setText(getResources().getString(R.string.radioContacts));
                     break;
                 case R.id.rb_main_footer_me:
                     addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(3));
-                    tv_head_main.setText("个人中心");
+                    tv_head_main.setText(getResources().getString(R.string.radioMe));
                     break;
             }
         }
@@ -121,21 +115,5 @@ public class MainActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    /**
-     * 适配沉浸状态栏
-     */
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    private void handleMaterialStatusBar() {
-        // Not supported in APK level lower than 21
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return;
 
-        Window window = this.getWindow();
-
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
-        window.setStatusBarColor(getResources().getColor(R.color.statusBar));
-
-    }
 }

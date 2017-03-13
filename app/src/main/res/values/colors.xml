@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="statusBar">#75B8F8</color>
     <color name="countDown">#F0F0F0</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="common_blue">#3F51B5</color>
+    <color name="division_line">#908080</color>
 </resources>

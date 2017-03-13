@@ -18,26 +18,26 @@
             style="@style/MainFooterButton"
             android:checked="true"
             android:drawableTop="@drawable/main_footer_new_selector"
-            android:text="消息" />
+            android:text="@string/radioNews" />
 
         <RadioButton
             android:id="@+id/rb_main_footer_lacation"
             style="@style/MainFooterButton"
             android:drawableTop="@drawable/main_footer_lacation_selector"
-            android:text="附近" />
+            android:text="@string/radioLacation" />
 
         <RadioButton
             android:id="@+id/rb_main_footer_contacts"
             style="@style/MainFooterButton"
             android:drawableTop="@drawable/main_footer_contacts_selector"
-            android:text="联系人" />
+            android:text="@string/radioContacts" />
 
 
         <RadioButton
             android:id="@+id/rb_main_footer_me"
             style="@style/MainFooterButton"
             android:drawableTop="@drawable/main_footer_me_selector"
-            android:text="个人中心" />
+            android:text="@string/radioMe" />
     </RadioGroup>
 
 </LinearLayout>
