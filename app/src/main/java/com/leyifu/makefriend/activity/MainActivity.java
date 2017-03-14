@@ -60,7 +60,6 @@ public class MainActivity extends BaseActivity {
     private void initUI() {
         tv_head_main = ((TextView) findViewById(R.id.tv_head_main));
         rg_main_footer = ((RadioGroup) findViewById(R.id.rg_main_footer));
-
     }
 
     RadioGroup.OnCheckedChangeListener checkChangeListener = new RadioGroup.OnCheckedChangeListener() {

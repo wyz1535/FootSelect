@@ -1,5 +1,7 @@
 package com.leyifu.makefriend.activity;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -11,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.leyifu.makefriend.R;
+import com.leyifu.makefriend.utils.DatabaseHelper;
 
 /**
  * Created by hahaha on 2017/3/13 0013.
@@ -93,6 +96,17 @@ public class RegistActivity extends BaseActivity {
             Toast.makeText(RegistActivity.this, "两次密码不一样", Toast.LENGTH_SHORT).show();
             return;
         }
+
+
+        DatabaseHelper dbHelper1 = new DatabaseHelper(this, "regist_db");
+        //取得一个只读的数据库对象
+        SQLiteDatabase db1 = dbHelper1.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("name",userName);
+        values.put("password",password);
+        db1.insert("user",null,values);
+
         Toast.makeText(RegistActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
     }
 }

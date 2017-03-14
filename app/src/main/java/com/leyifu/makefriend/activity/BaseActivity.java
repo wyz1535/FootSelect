@@ -1,9 +1,9 @@
 package com.leyifu.makefriend.activity;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -12,7 +12,7 @@ import com.leyifu.makefriend.R;
 /**
  * Created by hahaha on 2017/3/13 0013.
  */
-public class BaseActivity extends Activity {
+public class BaseActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

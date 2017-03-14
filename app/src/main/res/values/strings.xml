@@ -8,6 +8,7 @@
     <!--登陆和注册界面-->
     <string name="land">登陆</string>
     <string name="regist">注册</string>
+    <string name="next_step">下一步</string>
     <string name="forget_password">忘记密码</string>
     <string name="new_user_regist">新用户注册</string>
     <string name="read_terms">我已阅读并同意服务条款</string>
