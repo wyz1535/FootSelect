@@ -115,6 +115,7 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
                 SQLiteDatabase db = helper.getReadableDatabase();
                 //创建游标对象
 //                Cursor cursor = db.query("user", new String[]{"id", "name", "password"}, "id=?", new String[]{"1"}, null, null, null, null);
+
                 Cursor cursor = db.query("user", null, null, null, null, null, null);
                 while (cursor.moveToNext()) {
                     String _id = cursor.getString(0);
@@ -124,32 +125,25 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
                     Log.e(TAG, "_id-->" + _id + "mName-->" + mName + "mPassword-->" + mPassword);
                     nameMap.put(mName, mPassword);
                     list.add(mName);
-                    Collections.reverse(list);
                 }
+
                 db.close();
                 cursor.close();
+                Collections.reverse(list);
 
                 for (Map.Entry<String, String> entry : nameMap.entrySet()) {
                     //Map.entry<Integer,String> 映射项（键-值对）  有几个方法：用上面的名字entry
                     //entry.getKey() ;entry.getValue(); entry.setValue();
-                    //map.entrySet()  返回此映射中包含的映射关系的 Set视图。
-                    System.out.println("key= " + entry.getKey() + " and value= "
-                            + entry.getValue());
+
                     Log.e(TAG, "key= " + entry.getKey() + " and value= "
                             + entry.getValue() );
                 }
 
-//                for (int i = 0; i < list.size(); i++) {
-//                    String s = list.get(i);
-//                    Log.e(TAG, "s:= "+s );
-//                }
                 showPop(v);
-                Toast.makeText(LandAndRegistActivity.this, "更多", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.iv_land_more_name_up:
                 iv_land_more_name_down.setVisibility(View.VISIBLE);
                 iv_land_more_name_up.setVisibility(View.INVISIBLE);
-                Toast.makeText(LandAndRegistActivity.this, "更多", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.tv_forget_password:
                 Toast.makeText(LandAndRegistActivity.this, "忘记密码", Toast.LENGTH_SHORT).show();
@@ -161,7 +155,7 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
     private void showPop(View view) {
 
         View popView = LayoutInflater.from(LandAndRegistActivity.this).inflate(R.layout.pup_window, null);
-        popupWindow = new PopupWindow(popView, ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
+        popupWindow = new PopupWindow(popView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
 
         lv_pop = ((ListView) popView.findViewById(R.id.lv_pop));
 
@@ -175,7 +169,6 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-
                 return false;
                 // 这里如果返回true的话，touch事件将被拦截
                 // 拦截后 PopupWindow的onTouchEvent不被调用，这样点击外部区域无法dismiss
@@ -186,8 +179,14 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
 //        popupWindow.setBackgroundDrawable(getResources().getDrawable(
 //                R.drawable.pop_window));
 
-//        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
         popupWindow.showAsDropDown(view,-50,30);
+        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                iv_land_more_name_down.setVisibility(View.VISIBLE);
+                iv_land_more_name_up.setVisibility(View.INVISIBLE);
+            }
+        });
 
         UserNameAdapter userNameAdapter = new UserNameAdapter(LandAndRegistActivity.this,list);
         lv_pop.setAdapter(userNameAdapter);
