@@ -25,8 +25,7 @@ public class UserNameAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 3;
-//        return nameMap == null ? 0 : nameMap.size();
+        return nameMap.size() < 3 ? nameMap.size() : 3;
     }
 
     @Override

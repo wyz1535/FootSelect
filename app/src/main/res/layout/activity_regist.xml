@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_land_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/land_intef" />
+
+    <RelativeLayout
+        android:id="@+id/rl_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_land_icon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:inputType="phone"
+            android:id="@+id/et_regist_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/land_regist_round"
+            android:hint="请输入昵称"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/land_regist_account"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColorHint="#AAAAAA"
+            android:textCursorDrawable="@null" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_account"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/et_regist_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/land_regist_round"
+            android:hint="请输入密码(6—16数字或字母)"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/land_regist_account"
+            android:paddingTop="5dp"
+            android:textColorHint="#AAAAAA"
+            android:textCursorDrawable="@null" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sure_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_password"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/et_regist_sure_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/land_regist_round"
+            android:hint="请确认密码"
+            android:inputType="textPassword"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/land_regist_account"
+            android:paddingTop="5dp"
+            android:textColorHint="#AAAAAA"
+            android:textCursorDrawable="@null" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_land_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_sure_password"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/land_regist_selector"
+        android:text="@string/regist"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_size" />
+
+    <CheckBox
+        android:id="@+id/cb_read_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:checked="true"
+        android:text="@string/read_terms" />
+
+</RelativeLayout>

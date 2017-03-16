@@ -32,7 +32,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Log.i(SWORD,"create a Database");
         //创建数据库sql语句
         String sql = "create table user(uid int primary key,name varchar(20),password varchar(20))";
+        String desc = "select * from user order by desc ";
+//
         //执行创建数据库操作
+//        db.execSQL(desc);
         db.execSQL(sql);
     }
 
