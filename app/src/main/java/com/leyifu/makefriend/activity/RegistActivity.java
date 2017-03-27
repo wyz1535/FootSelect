@@ -130,5 +130,6 @@ public class RegistActivity extends BaseActivity {
         db.close();
         Toast.makeText(RegistActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(RegistActivity.this,LandAndRegistActivity.class));
+        finish();
     }
 }

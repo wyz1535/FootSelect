@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.leyifu.makefriend">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".activity.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,9 +26,9 @@
         <activity
             android:name=".activity.LandAndRegistActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.RegistActivity"
-            android:screenOrientation="portrait"
-            />
+        <activity
+            android:name=".activity.RegistActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 </manifest>

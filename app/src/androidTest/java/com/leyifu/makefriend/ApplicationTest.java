@@ -1,4 +1,4 @@
-package com.leyifu.footselect;
+package com.leyifu.makefriend;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

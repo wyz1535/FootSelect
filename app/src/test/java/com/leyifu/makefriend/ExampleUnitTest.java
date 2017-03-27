@@ -1,4 +1,4 @@
-package com.leyifu.footselect;
+package com.leyifu.makefriend;
 
 import org.junit.Test;
 

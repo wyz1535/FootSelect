@@ -9,4 +9,7 @@
     <color name="white">#FFFFFF</color>
     <color name="common_blue">#3F51B5</color>
     <color name="division_line">#908080</color>
+
+    <!--backgroup color-->
+    <color name="backgroup">#F0F0F0</color>
 </resources>

@@ -70,7 +70,6 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
         tv_forget_password = ((TextView) findViewById(R.id.tv_forget_password));
         iv_land_more_name_down = ((ImageView) findViewById(R.id.iv_land_more_name_down));
         rl_account = ((RelativeLayout) findViewById(R.id.rl_account));
-
     }
 
     private void init() {
@@ -129,7 +128,8 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
                 }
                 break;
             case R.id.iv_land_more_name_down:
-                iv_land_more_name_down.setImageDrawable(getResources().getDrawable(R.drawable.land_more_up));
+//                iv_land_more_name_down.setImageDrawable(getResources().getDrawable(R.drawable.land_more_up));
+                iv_land_more_name_down.setImageResource(R.drawable.land_more_up);
                 DatabaseHelper helper = new DatabaseHelper(LandAndRegistActivity.this, "regist_db");
                 SQLiteDatabase db = helper.getWritableDatabase();
                 //创建游标对象
@@ -202,7 +202,7 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
             }
         });
 
-        UserNameAdapter userNameAdapter = new UserNameAdapter(LandAndRegistActivity.this, list);
+        final UserNameAdapter userNameAdapter = new UserNameAdapter(LandAndRegistActivity.this, list);
         lv_pop.setAdapter(userNameAdapter);
 
         lv_pop.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -216,7 +216,8 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
                 et_land_password.setText(nameMap.get(list.get(position)));
                 et_land_password.setSelection(nameMap.get(list.get(position)).length());
                 popupWindow.dismiss();
-                iv_land_more_name_down.setImageDrawable(getResources().getDrawable(R.drawable.land_more_down));
+//                iv_land_more_name_down.setImageDrawable(getResources().getDrawable(R.drawable.land_more_down));
+                iv_land_more_name_down.setImageResource(R.drawable.land_more_down);
                 popupWindow = null;
             }
         });
@@ -239,12 +240,14 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
                                 int delete = db.delete("user", "name=?", new String[]{list.get(position)});
                                 Log.e(TAG, "onClick: delete" + delete + "list.get(position)" + list.get(position));
                                 db.close();
-                                lv_pop.notifyAll();
                                 popupWindow.dismiss();
+
                             }
                         }).show();
+//                userNameAdapter.notifyDataSetChanged();
                 return true;
             }
         });
+
     }
 }
