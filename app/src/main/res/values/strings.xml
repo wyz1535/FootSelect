@@ -13,4 +13,13 @@
     <string name="new_user_regist">新用户注册</string>
     <string name="read_terms">我已阅读并同意服务条款</string>
     <string name="other_way_land">使用其他方式登录</string>
+
+    <!--MeFragment-->
+    <string name="zxing_name_cadr">二维码名片</string>
+    <string name="zxing_scan">扫一扫</string>
+    <string name="me_collect">收藏</string>
+    <string name="me_privacy">隐私</string>
+    <string name="me_setting">设置</string>
+    <string name="me_account">账号</string>
+    <string name="me_user_name">用户名</string>
 </resources>

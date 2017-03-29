@@ -2,21 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/backgroup"
-    >
+    android:orientation="vertical">
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="I am meFragment"-->
-        <!--/>-->
+    <fragment
+        android:id="@+id/fm_me_account"
+        android:name="com.leyifu.makefriend.fragment.memanager.AccountFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_top"
+        />
+
+    <fragment
+        android:id="@+id/fm_me_zxing"
+        android:name="com.leyifu.makefriend.fragment.memanager.ZxingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_top"
+        />
+
+    <fragment
+        android:id="@+id/fm_me_collect"
+        android:name="com.leyifu.makefriend.fragment.memanager.CollectFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_top"
+        />
+
     <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/fm_me_zxing"
-        android:name="com.leyifu.makefriend.fragment.memanager.ZxingFragment"
-
+        android:id="@+id/fm_me_setting"
+        android:name="com.leyifu.makefriend.fragment.memanager.SettingFragment"
+        android:layout_marginTop="@dimen/mar_top"
         />
 
 </LinearLayout>

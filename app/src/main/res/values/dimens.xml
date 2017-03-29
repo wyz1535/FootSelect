@@ -6,4 +6,7 @@
     <dimen name="land_regist_account">10dp</dimen>
     <dimen name="common_size">16sp</dimen>
     <dimen name="small_common_size">12sp</dimen>
+
+    <!--MeFragment-->
+    <dimen name="mar_top">20dp</dimen>
 </resources>

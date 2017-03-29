@@ -27,14 +27,4 @@
          />
     <!--tools:layout="@layout/fragment_lacation"-->
 
-    <fragment
-        android:id="@+id/fm_me"
-        android:name="com.leyifu.makefriend.fragment.MeFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-         />
-    <!--tools:layout="@layout/fragment_me"-->
-
-
 </LinearLayout>

@@ -5,30 +5,32 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/tv_zxing_name_cadr"
+        android:clickable="true"
+        android:id="@+id/tv_me_privacy"
+        android:background="#fff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:clickable="true"
         android:orientation="horizontal">
 
         <ImageView
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_vertical"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:paddingLeft="10dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            />
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
-            android:text="@string/zxing_name_cadr"
+            android:text="@string/me_privacy"
             android:textSize="@dimen/common_size" />
     </LinearLayout>
+
 
 
     <LinearLayout
@@ -36,21 +38,21 @@
         android:layout_height="1dp"
         android:background="@color/backgroup"></LinearLayout>
 
-
     <LinearLayout
-        android:id="@+id/tv_zxing"
+        android:clickable="true"
+        android:id="@+id/tv_me_setting"
+        android:background="#fff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:clickable="true"
         android:orientation="horizontal">
 
         <ImageView
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_vertical"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:paddingLeft="10dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            />
 
         <TextView
             android:layout_width="match_parent"
@@ -58,8 +60,10 @@
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
-            android:text="@string/zxing_scan"
+            android:text="@string/me_setting"
             android:textSize="@dimen/common_size" />
+
     </LinearLayout>
+
 
 </LinearLayout>

@@ -13,9 +13,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.leyifu.makefriend.R;
@@ -28,8 +29,8 @@ import com.xys.libzxing.zxing.encoding.EncodingUtils;
  */
 public class ZxingFragment extends BaseFragment implements View.OnClickListener {
 
-    private TextView tv_zxing;
-    private TextView tv_zxing_name_cadr;
+    private LinearLayout tv_zxing;
+    private LinearLayout tv_zxing_name_cadr;
     private ImageView iv_pop_zxing;
 
     String url = "http://cn.bing.com/az/hprichbg/rb/Dongdaemun_ZH-CN10736487148_1920x1080.jpg";
@@ -43,8 +44,8 @@ public class ZxingFragment extends BaseFragment implements View.OnClickListener 
     }
 
     private void initUI(View view) {
-        tv_zxing = ((TextView) view.findViewById(R.id.tv_zxing));
-        tv_zxing_name_cadr = ((TextView) view.findViewById(R.id.tv_zxing_name_cadr));
+        tv_zxing = ((LinearLayout) view.findViewById(R.id.tv_zxing));
+        tv_zxing_name_cadr = ((LinearLayout) view.findViewById(R.id.tv_zxing_name_cadr));
     }
 
     @Override
@@ -58,7 +59,7 @@ public class ZxingFragment extends BaseFragment implements View.OnClickListener 
             case R.id.tv_zxing_name_cadr:
 //                String contentString = qrStrEditText.getText().toString();
                 //TODO 获取账号 生成账号
-                String contentString = "hello world";
+                String contentString = "www.baidu.com";
                 if (!"".equals(contentString)) {
                     //根据字符串生成二维码图片并显示在界面上，第二个参数为图片的大小（350*350）
 //                    BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher)
@@ -94,7 +95,6 @@ public class ZxingFragment extends BaseFragment implements View.OnClickListener 
                     //打开扫描界面扫描条形码或二维码
                     Intent openCameraIntent = new Intent(getActivity(), CaptureActivity.class);
                     startActivityForResult(openCameraIntent, 0);
-
                 }
 
                 break;
@@ -110,8 +110,15 @@ public class ZxingFragment extends BaseFragment implements View.OnClickListener 
         iv_pop_zxing.setImageBitmap(qrCodeBitmap);
         popupWindow.setFocusable(true);
         popupWindow.setOutsideTouchable(true);
+        backgroundAlpha(0.5f);
         popupWindow.setBackgroundDrawable(new ColorDrawable());
         popupWindow.showAtLocation(inflate, Gravity.CENTER,0,0);
+        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                backgroundAlpha(1.0f);
+            }
+        });
     }
 
     @Override
@@ -122,5 +129,17 @@ public class ZxingFragment extends BaseFragment implements View.OnClickListener 
             String scanResult = bundle.getString("result");
             Toast.makeText(getActivity(), scanResult, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    /**
+     * 设置添加屏幕的背景透明度
+     *
+     * @param bgAlpha
+     */
+    public void backgroundAlpha(float bgAlpha) {
+        WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
+        lp.alpha = bgAlpha; //0.0-1.0
+        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        getActivity().getWindow().setAttributes(lp);
     }
 }

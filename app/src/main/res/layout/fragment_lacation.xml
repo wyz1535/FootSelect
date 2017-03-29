@@ -5,10 +5,10 @@
     android:orientation="vertical">
 
     <Button
-        android:text="点击美女"
-    android:id="@+id/bt_glide_test"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+        android:id="@+id/bt_glide_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击美女" />
 
     <ImageView
         android:id="@+id/iv_glide_test"
