@@ -4,6 +4,8 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,17 +15,20 @@ import com.leyifu.makefriend.fragment.ContactsFragment;
 import com.leyifu.makefriend.fragment.LacationFragment;
 import com.leyifu.makefriend.fragment.MeFragment;
 import com.leyifu.makefriend.fragment.NewsFragment;
+import com.leyifu.makefriend.widget.MorePopWindow;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private RadioGroup rg_main_footer;
     private List<Fragment> fragments = new ArrayList<>();
     private android.app.FragmentManager fragmentManager;
     private TextView tv_head_main;
     private Fragment currentFragment;
+    private ImageView iv_main_search;
+    private ImageView iv_main_add;
 //    private String[] radioText= new String[]{"消息","附近","联系人","个人中心",};
 
     @Override
@@ -31,13 +36,15 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        ActionBar actionBar = getSupportActionBar();
+//        if (actionBar!=null) {
+//            actionBar.hide();
+//        }
+
 //      初始化UI
         initUI();
 //      初始化数据
         initDate();
-
-        //配MIUI沉浸状态栏
-
     }
 
     private void initDate() {
@@ -54,12 +61,17 @@ public class MainActivity extends BaseActivity {
             fragmentManager.beginTransaction().add(R.id.fragment_main, fragments.get(0)).commit();
             currentFragment = fragments.get(0);
         }
-        tv_head_main.setText(getResources().getString(R.string.radioNews));
+//        tv_head_main.setText(getResources().getString(R.string.radioNews));
     }
 
     private void initUI() {
         tv_head_main = ((TextView) findViewById(R.id.tv_head_main));
         rg_main_footer = ((RadioGroup) findViewById(R.id.rg_main_footer));
+        iv_main_search = ((ImageView) findViewById(R.id.iv_main_search));
+        iv_main_add = ((ImageView) findViewById(R.id.iv_main_add));
+
+        iv_main_search.setOnClickListener(this);
+        iv_main_add.setOnClickListener(this);
     }
 
     RadioGroup.OnCheckedChangeListener checkChangeListener = new RadioGroup.OnCheckedChangeListener() {
@@ -68,19 +80,19 @@ public class MainActivity extends BaseActivity {
             switch (checkedId) {
                 case R.id.rb_main_footer_new:
                     addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(0));
-                    tv_head_main.setText(getResources().getString(R.string.radioNews));
+//                    tv_head_main.setText(getResources().getString(R.string.radioNews));
                     break;
                 case R.id.rb_main_footer_lacation:
                     addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(1));
-                    tv_head_main.setText(getResources().getString(R.string.radioLacation));
+//                    tv_head_main.setText(getResources().getString(R.string.radioLacation));
                     break;
                 case R.id.rb_main_footer_contacts:
                     addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(2));
-                    tv_head_main.setText(getResources().getString(R.string.radioContacts));
+//                    tv_head_main.setText(getResources().getString(R.string.radioContacts));
                     break;
                 case R.id.rb_main_footer_me:
                     addOrShowFragment(fragmentManager.beginTransaction(), fragments.get(3));
-                    tv_head_main.setText(getResources().getString(R.string.radioMe));
+//                    tv_head_main.setText(getResources().getString(R.string.radioMe));
                     break;
             }
         }
@@ -114,5 +126,17 @@ public class MainActivity extends BaseActivity {
         return super.onKeyDown(keyCode, event);
     }
 
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.iv_main_search:
+                break;
+            case R.id.iv_main_add:
+                MorePopWindow morePopWindow = new MorePopWindow(MainActivity.this);
+                morePopWindow.showPopupWindow(iv_main_add);
+                break;
+        }
+    }
 
 }

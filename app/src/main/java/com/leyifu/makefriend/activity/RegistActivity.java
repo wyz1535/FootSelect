@@ -15,7 +15,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.leyifu.makefriend.R;
-import com.leyifu.makefriend.utils.DatabaseHelper;
+import com.leyifu.makefriend.db.DatabaseHelper;
+import com.leyifu.makefriend.utils.ActivityCollection;
 
 /**
  * Created by hahaha on 2017/3/13 0013.
@@ -101,7 +102,7 @@ public class RegistActivity extends BaseActivity {
 
 
         DatabaseHelper dbHelper1 = new DatabaseHelper(this, "regist_db");
-        //取得一个只读的数据库对象
+        //取得一个只写的数据库对象
         SQLiteDatabase db = dbHelper1.getWritableDatabase();
 
         Cursor cursor = db.query("user", new String[]{"name"}, null, null, null, null, null, null);
@@ -114,22 +115,15 @@ public class RegistActivity extends BaseActivity {
                 return;
             }
         }
-
         ContentValues values = new ContentValues();
         values.put("name", userName);
         values.put("password", password);
         db.insert("user", null, values);
 
-
-//        String s = "select * from search_history where (select count(name) from search_history) >2";
-//
-
-//        delete from search_history where (select count(keyword) from search_history
-//        )> 2 and keyword in (select keyword from search_history order by time desc limit (select count(keywo
         cursor.close();
         db.close();
         Toast.makeText(RegistActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(RegistActivity.this,LandAndRegistActivity.class));
-        finish();
+        startActivity(new Intent(RegistActivity.this, LandAndRegistActivity.class));
+        ActivityCollection.finishAll();
     }
 }

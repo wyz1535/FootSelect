@@ -18,4 +18,41 @@
         <item name="android:textColor">@color/main_footer_text_selector</item>
     </style>
 
+    <!-- 右上角popupwindow -->
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <!--分割线-->
+    <style name="devidesLines">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#F0F0F0</item>
+    </style>
+
+    <style name="textViewNoClick">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">@dimen/common_size</item>
+    </style>
+
+    <style name="textViewStyle" parent="textViewNoClick">
+        <item name="android:clickable">true</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="passwordET" >
+        <item name="android:textSize">@dimen/common_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColorHint">#AAAAAA</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
 </resources>

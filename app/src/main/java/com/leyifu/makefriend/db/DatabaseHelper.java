@@ -1,4 +1,4 @@
-package com.leyifu.makefriend.utils;
+package com.leyifu.makefriend.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -29,7 +29,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     //创建数据库
     public void onCreate(SQLiteDatabase db) {
-        Log.i(SWORD,"create a Database");
         //创建数据库sql语句
         String sql = "create table user(uid int primary key,name varchar(20),password varchar(20))";
         String desc = "select * from user order by desc ";
@@ -43,5 +42,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //创建成功，日志输出提示
         Log.i(SWORD,"update a Database");
+        //跟新数据路
+//        db.execSQL("drop table if exists user");
+//        onCreate(db);
     }
 }

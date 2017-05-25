@@ -1,34 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="#55B8F8"
-    >
+    android:layout_height="@dimen/head"
+    android:background="@color/head">
 
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
+    <!--<TextView-->
+    <!--android:id="@+id/textview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="20dp" -->
+    <!--android:text="enene"-->
+    <!--android:textColor="#fff"-->
+    <!--/>-->
 
     <TextView
         android:id="@+id/tv_head_main"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:text="微聊"
         android:textColor="#fff"
-        android:textSize="25sp"
-        android:text="haha" />
+        android:textSize="18sp" />
 
     <ImageView
+        android:id="@+id/iv_main_search"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/iv_main_add"
+        android:src="@drawable/click_main_search03"
+        />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/click_search03"
+    <ImageView
+        android:id="@+id/iv_main_add"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
-        />
+        android:src="@drawable/click_main_add" />
 
 
 </RelativeLayout>

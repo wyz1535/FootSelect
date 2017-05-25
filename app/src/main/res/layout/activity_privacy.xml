@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroup"
+    android:orientation="vertical">
+
+    <include layout="@layout/me_head" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_top">
+
+        <TextView
+            android:id="@+id/tv_add_fried"
+            style="@style/textViewNoClick"
+            android:background="@color/white"
+            android:text="@string/me_add_fried" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp" />
+    </RelativeLayout>
+
+    <LinearLayout style="@style/devidesLines" />
+
+    <TextView
+        style="@style/textViewStyle"
+        android:text="@string/me_black_list" />
+
+</LinearLayout>

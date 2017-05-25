@@ -5,36 +5,188 @@
     android:background="@color/backgroup"
     android:orientation="vertical">
 
-    <fragment
-        android:id="@+id/fm_me_account"
-        android:name="com.leyifu.makefriend.fragment.memanager.AccountFragment"
+    <!--个人账号-->
+    <LinearLayout
+        android:id="@+id/ll_me_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/mar_top"
-        />
+        android:background="@color/me_catalogue_backgroup"
+        android:clickable="true"
+        android:orientation="horizontal">
 
-    <fragment
-        android:id="@+id/fm_me_zxing"
-        android:name="com.leyifu.makefriend.fragment.memanager.ZxingFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/mar_top"
-        />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_launcher" />
 
-    <fragment
-        android:id="@+id/fm_me_collect"
-        android:name="com.leyifu.makefriend.fragment.memanager.CollectFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/mar_top"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <fragment
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/me_user_name"
+                android:textSize="@dimen/common_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/me_account"
+                android:textSize="@dimen/common_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--二维码-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/fm_me_setting"
-        android:name="com.leyifu.makefriend.fragment.memanager.SettingFragment"
         android:layout_marginTop="@dimen/mar_top"
-        />
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_zxing_name_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/me_catalogue_backgroup"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/zxing_name_cadr"
+                android:textSize="@dimen/common_size" />
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/devidesLines" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_zxing_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/me_catalogue_backgroup"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:src="@drawable/pop_scan" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/zxing_scan"
+                android:textSize="@dimen/common_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--收藏-->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_me_collect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar_top"
+            android:background="@color/me_catalogue_backgroup"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/me_collect"
+                android:textSize="@dimen/common_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--隐私 设置-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_top"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/devidesLines" />
+
+        <LinearLayout
+            android:id="@+id/ll_me_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/me_catalogue_backgroup"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:src="@drawable/me_setting" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/me_setting"
+                android:textSize="@dimen/common_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<fragment-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/fm_me_setting"-->
+    <!--android:name="com.leyifu.makefriend.fragment.memanager.SettingFragment"-->
+    <!--android:layout_marginTop="@dimen/mar_top"-->
+    <!--/>-->
 
 </LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroup"
+    android:orientation="vertical">
+
+    <include layout="@layout/me_head" />
+
+    <TextView
+        android:id="@+id/tv_updata_passwoed"
+        style="@style/textViewStyle"
+        android:layout_marginTop="@dimen/mar_top"
+        android:text="@string/me_updata_password" />
+
+    <LinearLayout
+        style="@style/devidesLines" />
+
+    <TextView
+        android:id="@+id/tv_privacy"
+        style="@style/textViewStyle"
+        android:text="@string/me_privacy" />
+
+    <LinearLayout style="@style/devidesLines" />
+
+    <TextView
+        android:id="@+id/tv_new_news"
+        style="@style/textViewStyle"
+        android:text="@string/me_new_news_notify" />
+
+    <TextView
+        android:id="@+id/tv_clear_cache"
+        style="@style/textViewStyle"
+        android:layout_marginTop="@dimen/mar_top"
+        android:text="@string/me_clear_cache" />
+
+    <Button
+        android:id="@+id/bt_quit_land"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/land_regist_selector"
+        android:text="@string/me_quit_land"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_size" />
+
+</LinearLayout>

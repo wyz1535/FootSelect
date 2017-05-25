@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/land_regist_round"
-            android:hint="请输入密码(6—16数字或字母)"
+            android:hint="@string/me_hint_password"
             android:inputType="textPassword"
             android:maxLength="16"
             android:paddingBottom="5dp"

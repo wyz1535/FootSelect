@@ -22,4 +22,38 @@
     <string name="me_setting">设置</string>
     <string name="me_account">账号</string>
     <string name="me_user_name">用户名</string>
+    <string name="me_account_me">个人账号</string>
+    <string name="me_account_head">头像</string>
+    <string name="me_account_nick_name">昵称</string>
+    <string name="me_account_number">账号</string>
+    <string name="me_account_photo">拍照</string>
+    <string name="me_account_native">从相册中选取</string>
+    <string name="me_account_canal">取消</string>
+    <string name="me_updata_password">密码修改</string>
+    <string name="me_new_news_notify">新消息通知</string>
+    <string name="me_clear_cache">清除缓存</string>
+    <string name="me_quit_land">退出登录</string>
+    <string name="me_old_password">原密码</string>
+    <string name="me_new_password">新密码</string>
+    <string name="me_confirm_password">确认密码</string>
+    <string name="me_hint_password">6-16个字符，区分大小写</string>
+    <string name="me_confirm">确认</string>
+    <string name="me_add_fried">加入为好友是需要验证</string>
+    <string name="me_black_list">黑名单</string>
+
+    <!--bar popupwindow-->
+    <string name="private_chat">发起聊天</string>
+    <string name="group_chat">创建群组</string>
+    <string name="add_contacts">添加好友</string>
+
+    <string name="add_black_list">加入黑名单</string>
+    <string name="remove_friend">删除好友</string>
+
+    <string name="set_name">设置备注</string>
+
+    <string name="voice_char">语音通话</string>
+    <string name="video_char">视频聊天</string>
+    <string name="text_char">发起会话</string>
+
+
 </resources>

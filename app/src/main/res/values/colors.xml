@@ -6,10 +6,19 @@
     <color name="statusBar">#75B8F8</color>
     <color name="countDown">#F0F0F0</color>
 
+    <color name="head">#55B8F8</color>
+
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
     <color name="common_blue">#3F51B5</color>
     <color name="division_line">#908080</color>
+    <color name="division_line_two">#F0F0F0</color>
 
     <!--backgroup color-->
     <color name="backgroup">#F0F0F0</color>
+
+    <color name="pop_text_color">#353535</color>
+    
+    <color name="me_catalogue_backgroup">#FAFAFA</color>
+    
 </resources>

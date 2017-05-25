@@ -15,7 +15,6 @@
     <LinearLayout
         android:id="@+id/ll_me_collect"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
         android:clickable="true"
         android:orientation="vertical">
@@ -36,8 +35,5 @@
             android:paddingLeft="10dp"
             android:text="@string/me_account"
             android:textSize="@dimen/common_size" />
-
     </LinearLayout>
-
-
 </LinearLayout>

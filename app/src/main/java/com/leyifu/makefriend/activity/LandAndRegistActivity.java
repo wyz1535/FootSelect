@@ -25,7 +25,7 @@ import android.widget.Toast;
 
 import com.leyifu.makefriend.R;
 import com.leyifu.makefriend.adapter.UserNameAdapter;
-import com.leyifu.makefriend.utils.DatabaseHelper;
+import com.leyifu.makefriend.db.DatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,6 +47,7 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
     private ImageView iv_land_more_name_down;
 
     Map<String, String> nameMap = new HashMap<String, String>();
+    Map<String, String> landMap = new HashMap<String, String>();
     List<String> list = new ArrayList<String>();
 
     private ListView lv_pop;
@@ -86,11 +87,9 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
 
-
         switch (v.getId()) {
             case R.id.tv_new_user_regist:
                 Intent registIntent = new Intent(LandAndRegistActivity.this, RegistActivity.class);
-
                 startActivity(registIntent);
                 break;
             case R.id.bt_land_regist:
@@ -108,6 +107,8 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
                 while (cursor1.moveToNext()) {
                     landName = cursor1.getString(cursor1.getColumnIndex("name"));
                     landPassword = cursor1.getString(cursor1.getColumnIndex("password"));
+                    landMap.put(landName, landPassword);
+
                 }
                 db1.close();
                 cursor1.close();
@@ -118,14 +119,19 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
                 } else if (TextUtils.isEmpty(password)) {
                     Toast.makeText(LandAndRegistActivity.this, "请输入密码", Toast.LENGTH_SHORT).show();
                     return;
-                } else if ((name).equals(landName) && (password.equals(landPassword))) {
-                    Intent mainIntent = new Intent(LandAndRegistActivity.this, MainActivity.class);
-                    startActivity(mainIntent);
-                    Toast.makeText(LandAndRegistActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
-                    finish();
-                } else {
-                    Toast.makeText(LandAndRegistActivity.this, "账号密码不正确", Toast.LENGTH_SHORT).show();
                 }
+                for (Map.Entry<String, String> entry : landMap.entrySet()) {
+                    //Map.entry<Integer,String> 映射项（键-值对）  有几个方法：用上面的名字entry
+                    //entry.getKey() ;entry.getValue(); entry.setValue();
+                    if ((name).equals(entry.getKey()) && (password.equals(entry.getValue()))) {
+                        Intent mainIntent = new Intent(LandAndRegistActivity.this, MainActivity.class);
+                        startActivity(mainIntent);
+                        Toast.makeText(LandAndRegistActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
+                        finish();
+                        return;
+                    }
+                }
+                Toast.makeText(LandAndRegistActivity.this, "账号密码不正确", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.iv_land_more_name_down:
 //                iv_land_more_name_down.setImageDrawable(getResources().getDrawable(R.drawable.land_more_up));
@@ -151,14 +157,6 @@ public class LandAndRegistActivity extends BaseActivity implements View.OnClickL
                 db.close();
                 cursor.close();
                 Collections.reverse(list);
-
-                for (Map.Entry<String, String> entry : nameMap.entrySet()) {
-                    //Map.entry<Integer,String> 映射项（键-值对）  有几个方法：用上面的名字entry
-                    //entry.getKey() ;entry.getValue(); entry.setValue();
-
-//                    Log.e(TAG, "key= " + entry.getKey() + " and value= "
-//                            + entry.getValue());
-                }
 
                 showPop(v);
                 break;

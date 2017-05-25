@@ -3,6 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="head">45dp</dimen>
+
     <dimen name="land_regist_account">10dp</dimen>
     <dimen name="common_size">16sp</dimen>
     <dimen name="small_common_size">12sp</dimen>

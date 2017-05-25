@@ -58,6 +58,7 @@
         android:layout_marginTop="10dp">
 
         <EditText
+
             android:textCursorDrawable="@null"
             android:id="@+id/et_land_password"
             android:layout_width="match_parent"

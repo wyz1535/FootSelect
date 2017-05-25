@@ -13,14 +13,14 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.leyifu.makefriend.R;
 import com.leyifu.makefriend.fragment.BaseFragment;
+import com.leyifu.makefriend.utils.BackgroundAlpha;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 import com.xys.libzxing.zxing.encoding.EncodingUtils;
 
@@ -67,7 +67,7 @@ public class ZxingFragment extends BaseFragment implements View.OnClickListener 
                     Bitmap qrCodeBitmap = EncodingUtils.createQRCode(contentString, 400, 400,
                             BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher)
                     );
-                    popWinShowZXing(v,qrCodeBitmap);
+                    popWinShowZXing(v, qrCodeBitmap);
                 } else {
                     Toast.makeText(v.getContext(), "网络错误，请稍后再试", Toast.LENGTH_SHORT).show();
                 }
@@ -84,7 +84,7 @@ public class ZxingFragment extends BaseFragment implements View.OnClickListener 
                         Toast.makeText(v.getContext(), "请先开启权限", Toast.LENGTH_SHORT).show();
                         getParentFragment().requestPermissions(new String[]{android.Manifest.permission.CAMERA}, 1);
                     } else {
-                        //说明已经获取到摄像头权限了 想干嘛干嘛
+                        //说明已经获取到摄像头权限了 执行逻辑
                         //打开扫描界面扫描条形码或二维码
 //                        Activity activity = getActivity();
                         Intent openCameraIntent = new Intent(getActivity(), CaptureActivity.class);
@@ -105,18 +105,18 @@ public class ZxingFragment extends BaseFragment implements View.OnClickListener 
 
         View inflate = LayoutInflater.from(v.getContext()).inflate(R.layout.pop_zxing, null);
         PopupWindow popupWindow = new PopupWindow(inflate, ViewPager.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT,true);
+                ViewGroup.LayoutParams.WRAP_CONTENT, true);
         iv_pop_zxing = ((ImageView) inflate.findViewById(R.id.iv_pop_zxing));
         iv_pop_zxing.setImageBitmap(qrCodeBitmap);
         popupWindow.setFocusable(true);
         popupWindow.setOutsideTouchable(true);
-        backgroundAlpha(0.5f);
+        new BackgroundAlpha().backgroundAlpha(getActivity(),0.5f);
         popupWindow.setBackgroundDrawable(new ColorDrawable());
-        popupWindow.showAtLocation(inflate, Gravity.CENTER,0,0);
+        popupWindow.showAtLocation(inflate, Gravity.CENTER, 0, 0);
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {
-                backgroundAlpha(1.0f);
+                new BackgroundAlpha().backgroundAlpha(getActivity(),1.0f);
             }
         });
     }
@@ -129,17 +129,5 @@ public class ZxingFragment extends BaseFragment implements View.OnClickListener 
             String scanResult = bundle.getString("result");
             Toast.makeText(getActivity(), scanResult, Toast.LENGTH_SHORT).show();
         }
-    }
-
-    /**
-     * 设置添加屏幕的背景透明度
-     *
-     * @param bgAlpha
-     */
-    public void backgroundAlpha(float bgAlpha) {
-        WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
-        lp.alpha = bgAlpha; //0.0-1.0
-        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-        getActivity().getWindow().setAttributes(lp);
     }
 }
