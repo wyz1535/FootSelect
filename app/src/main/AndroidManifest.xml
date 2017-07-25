@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".activity.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -33,6 +33,63 @@
             android:name=".activity.RegistActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".activity.AccountActivity" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.UpdataPasswordActivity" />
+        <activity android:name=".activity.PrivacyActivity" />
+        <activity android:name=".activity.UserDetailActivity" />
+
+        <!-- 聊天界面 -->
+        <activity android:name=".activity.ConversationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.leyifu.makefriend"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 会话列表 -->
+        <activity
+            android:name=".activity.ConversationListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.leyifu.makefriend"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 聚合会话列表 -->
+        <activity
+            android:name=".activity.SubConversationListActivtiy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.leyifu.makefriend"
+                    android:pathPrefix="/subconversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="9e2527d574dff41bff95721f073ef732" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -44,10 +101,7 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".activity.SettingActivity" />
-        <activity android:name=".activity.UpdataPasswordActivity" />
-        <activity android:name=".activity.PrivacyActivity" />
-        <activity android:name=".activity.UserDetailActivity"></activity>
+        <activity android:name=".activity.ChatInfomationActivity"></activity>
     </application>
 
 </manifest>

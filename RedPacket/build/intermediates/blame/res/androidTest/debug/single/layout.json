@@ -1,0 +1,326 @@
+[
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_secure_setting.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_secure_setting.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_verification_code_dialog.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_verification_code_dialog.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_update_pwd.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_update_pwd.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_divider.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_divider.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_header_rp_detail.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_header_rp_detail.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_my_bank_card.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_my_bank_card.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_item_setting_bank_cark_list.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_item_setting_bank_cark_list.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_layout_line.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_layout_line.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_trade_history.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_trade_history.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_bribery_item.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_bribery_item.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_header_receive_rp.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_header_receive_rp.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_base_dialog.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_base_dialog.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_divider.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_divider.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_dialog_select_sub_bank.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_dialog_select_sub_bank.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_webview.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_webview.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_rp_detail.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_rp_detail.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_setting_pswd.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_setting_pswd.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_send_single_peak.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_send_single_peak.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_my_wallet.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_my_wallet.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_add_card_second.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_add_card_second.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_fragment_trade_detail.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_fragment_trade_detail.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_dialog_pwd_error.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_dialog_pwd_error.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_textview.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_textview.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_dialog_paytype.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_dialog_paytype.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_pswd_error_dialog.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_pswd_error_dialog.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_select_sub_bank.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_select_sub_bank.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_item_trade_history.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_item_trade_history.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_limit_dialog.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_limit_dialog.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_add_card_first.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_add_card_first.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_find_pwd_by_info.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_find_pwd_by_info.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_add_card_second.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_add_card_second.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_add_card.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_add_card.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_support_bank_card.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_support_bank_card.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_identity_authen.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_identity_authen.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_gridpasswordview.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_gridpasswordview.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_title_bar.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_title_bar.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_layout_actionbar.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_layout_actionbar.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_floating_label_text_view.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_floating_label_text_view.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_header_send_rp.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_header_send_rp.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_dialog_input_pwd.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_dialog_input_pwd.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_dialog_progress.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_dialog_progress.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_item_add_bank_card.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_item_add_bank_card.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_dialog_paytype_old_card_item.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_dialog_paytype_old_card_item.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_dialog_paytype_balance_item.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_dialog_paytype_balance_item.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_dialog_open_rp.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_dialog_open_rp.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_my_rp.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_my_rp.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_pay_type.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_pay_type.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_fragment_red_packet_history.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_fragment_red_packet_history.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_textview.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_textview.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_recharge.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_recharge.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_bank_setting.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_bank_setting.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_open_packet.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_open_packet.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_adapter_banklist_item.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_adapter_banklist_item.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_trade_detail.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_trade_detail.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_item_select_change.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_item_select_change.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_item_rp_detail.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_item_rp_detail.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_item_list_buttom.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_item_list_buttom.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_myedittext.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_myedittext.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_dialog_common_progress.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_dialog_common_progress.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_send_group_peak.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_send_group_peak.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_rest_pswd.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_rest_pswd.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_pwd_check.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_pwd_check.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_gridpasswordview.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_gridpasswordview.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_account_info.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_account_info.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_item_bank_cark_list.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_item_bank_cark_list.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_dialog_red_envelope_invalid.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_dialog_red_envelope_invalid.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_item_select_pay_type.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_item_select_pay_type.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_add_card_first.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_add_card_first.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_dialog_select_pay_type.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_dialog_select_pay_type.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_my_rp.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_my_rp.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_fragment_getdeposit.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_fragment_getdeposit.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_real_name.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_real_name.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_activity_set_pay_pwd.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_activity_set_pay_pwd.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_layout_titlebar.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_layout_titlebar.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_get_pwd.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_get_pwd.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_item_new_card.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_item_new_card.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\w_layout_line_959595.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\w_layout_line_959595.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_item_rp_history.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_item_rp_history.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_getdeposit.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_getdeposit.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_browsers.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_browsers.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\_activity_bank_card_list.xml",
+        "source": "E:\\WorkSpace\\Foot\\RedPacket\\build\\intermediates\\bundles\\debug\\res\\layout\\_activity_bank_card_list.xml"
+    }
+]

@@ -3,18 +3,19 @@ package com.leyifu.makefriend.activity;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 
 import com.leyifu.makefriend.R;
 import com.leyifu.makefriend.utils.ActivityCollection;
+import com.leyifu.makefriend.utils.Utils;
 
 /**
  * Created by hahaha on 2017/3/13 0013.
  */
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends FragmentActivity {
 
     private static final String TAG = "BaseActivity";
 
@@ -24,6 +25,10 @@ public class BaseActivity extends AppCompatActivity {
         handleMaterialStatusBar();
 
         ActivityCollection.addActivity(this);
+
+        if (!Utils.utilsCheckNetWork(this)) {
+            Utils.startToast(this,"没有网络");
+        }
     }
 
     @Override

@@ -6,6 +6,16 @@
  */
 package com.leyifu.makefriend.view;
 
+import android.graphics.Color;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
+
+import io.rong.imlib.model.MessageContent;
+import io.rong.message.FileMessage;
+import io.rong.message.RichContentMessage;
+import io.rong.message.TextMessage;
+
 /**
  * Java汉字转换为拼音
  * 
@@ -133,6 +143,110 @@ public class CharacterParser {
 
 	public String getSpelling() {
 		return this.getSelling(this.getResource());
+	}
+
+
+
+//	private static CharacterParser singleInstance;
+
+//	public static CharacterParser getInstance() {
+//		if (singleInstance == null) {
+//			synchronized (CharacterParser.class) {
+//				if (singleInstance == null) {
+//					singleInstance = new CharacterParser();
+//				}
+//			}
+//		}
+//		return singleInstance;
+//	}
+
+	public SpannableStringBuilder getColoredChattingRecord(String filterStr, MessageContent messageContent) {
+		SpannableStringBuilder messageText = new SpannableStringBuilder();
+		if (messageContent instanceof TextMessage) {
+			TextMessage textMessage = (TextMessage) messageContent;
+			String textMessageContent = textMessage.getContent();
+			messageText = getOmitColored(filterStr, textMessageContent, 0);
+		}
+		if (messageContent instanceof RichContentMessage) {
+			RichContentMessage richContentMessage = (RichContentMessage) messageContent;
+			String messageTitle = richContentMessage.getTitle();
+			messageText = getOmitColored(filterStr, messageTitle, 1);
+			if (messageText.length() == 0) {
+				SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder("[链接] ");
+				spannableStringBuilder.append(messageTitle);
+				messageText = spannableStringBuilder;
+			}
+		}
+		if (messageContent instanceof FileMessage) {
+			FileMessage fileMessage = (FileMessage) messageContent;
+			String fileName = fileMessage.getName();
+			messageText = getOmitColored(filterStr, fileName, 2);
+		}
+		return messageText;
+	}
+
+	private SpannableStringBuilder getOmitColored(String filterStr, String content, int type) {
+		SpannableStringBuilder messageText = new SpannableStringBuilder();
+		String lowerCaseFilterStr = filterStr.toLowerCase();
+		String lowerCaseText = content.toLowerCase();
+		if (lowerCaseText.contains(lowerCaseFilterStr)) {
+			SpannableStringBuilder finalBuilder = new SpannableStringBuilder();
+			if (type == 0) {
+			} else if (type == 1) {
+				finalBuilder.append("[链接] ");
+			} else if (type == 2) {
+				finalBuilder.append("[文件] ");
+			}
+			int length = content.length();
+			int firstIndex = lowerCaseText.indexOf(lowerCaseFilterStr);
+			String subString = content.substring(firstIndex);
+			int restLength;
+			if (subString != null) {
+				restLength = subString.length();
+			} else {
+				restLength = 0;
+			}
+			if (length <= 12) {
+				SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(content);
+				spannableStringBuilder.setSpan(new ForegroundColorSpan(Color.parseColor("#0099ff")), firstIndex, firstIndex + filterStr.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+				return finalBuilder.append(spannableStringBuilder);
+
+			} else {
+				//首次出现搜索字符的index加上filter的length；
+				int totalLength = firstIndex + filterStr.length();
+				if (totalLength < 12) {
+					String smallerString = content.substring(0, 12);
+					SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(smallerString);
+					spannableStringBuilder.setSpan(new ForegroundColorSpan(Color.parseColor("#0099ff")), firstIndex, firstIndex + filterStr.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+					spannableStringBuilder.append("...");
+					return finalBuilder.append(spannableStringBuilder);
+				} else if (restLength < 12) {
+					String smallerString = content.substring(length - 12, length);
+					String smallerStringLowerCase = lowerCaseText.substring(length - 12, length);
+					int index = smallerStringLowerCase.indexOf(lowerCaseFilterStr);
+					SpannableStringBuilder builder = new SpannableStringBuilder("...");
+					SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(smallerString);
+					spannableStringBuilder.setSpan(new ForegroundColorSpan(Color.parseColor("#0099ff")), index, index + filterStr.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+					builder.append(spannableStringBuilder);
+					return finalBuilder.append(builder);
+				} else {
+					String smallerString = content.substring(firstIndex - 5, firstIndex + 7);
+					String smallerStringLowerCase = lowerCaseText.substring(firstIndex - 5, firstIndex + 7);
+					int index = smallerStringLowerCase.indexOf(lowerCaseFilterStr);
+					SpannableStringBuilder builder = new SpannableStringBuilder("...");
+					SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(smallerString);
+					spannableStringBuilder.setSpan(new ForegroundColorSpan(Color.parseColor("#0099ff")), index, getSmallerLength(smallerString.length(), index + filterStr.length()), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+					builder.append(spannableStringBuilder);
+					builder.append("...");
+					return finalBuilder.append(builder);
+				}
+			}
+		}
+		return messageText;
+	}
+
+	private int getSmallerLength(int stringLength, int endIndex) {
+		return stringLength > endIndex + 1 ? endIndex : stringLength;
 	}
 
 }

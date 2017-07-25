@@ -22,7 +22,7 @@ import com.leyifu.makefriend.R;
 import com.leyifu.makefriend.activity.AccountActivity;
 import com.leyifu.makefriend.activity.SettingActivity;
 import com.leyifu.makefriend.utils.BackgroundAlpha;
-import com.leyifu.makefriend.utils.ToastUtil;
+import com.leyifu.makefriend.utils.Utils;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 import com.xys.libzxing.zxing.encoding.EncodingUtils;
 
@@ -79,7 +79,7 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
                 Toast.makeText(view.getContext(),"ll_zxing_scan",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.ll_me_collect:
-                ToastUtil.startToast(view.getContext(),"ll_me_collect");
+                Utils.startToast(view.getContext(),"ll_me_collect");
                 break;
             case R.id.ll_me_setting:
                     startActivity(new Intent(view.getContext(), SettingActivity.class));

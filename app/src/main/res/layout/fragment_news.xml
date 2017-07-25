@@ -5,26 +5,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:clickable="true"
-        android:onClick="newsText"
-        android:id="@+id/iv_news_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher" />
+    <!--<ImageView-->
+        <!--android:clickable="true"-->
+        <!--android:onClick="newsText"-->
+        <!--android:id="@+id/iv_news_test"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/ic_launcher" />-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I am newfragment" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="I am newfragment" />-->
 
-    <fragment
-        android:id="@+id/fm_lacation"
-        android:name="com.leyifu.makefriend.fragment.LacationFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-         />
-    <!--tools:layout="@layout/fragment_lacation"-->
+    <!--<fragment-->
+        <!--android:id="@+id/fm_lacation"-->
+        <!--android:name="com.leyifu.makefriend.fragment.LacationFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+         <!--/>-->
+
 
 </LinearLayout>

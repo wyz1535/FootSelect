@@ -26,7 +26,6 @@ public class PrivacyActivity extends BaseActivity implements View.OnClickListene
 
         tv_me_title.setText("隐私");
         iv_me_back.setOnClickListener(this);
-
     }
 
     @Override

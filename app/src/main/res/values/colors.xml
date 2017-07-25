@@ -16,6 +16,9 @@
 
     <!--backgroup color-->
     <color name="backgroup">#F0F0F0</color>
+    <color name="text_view_click">#88ffffff</color>
+
+    <color name="connect_not_invalid">#FFDFDF</color>
 
     <color name="pop_text_color">#353535</color>
     

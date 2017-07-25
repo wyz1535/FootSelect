@@ -20,7 +20,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="8dp"
-        android:background="@color/division_line"/>
+        android:background="@color/division_line" />
 
     <TextView
         android:id="@+id/tv_me_title"
@@ -38,6 +38,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:src="@drawable/me_head_white_point"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_tab_me_hover"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/tab_me_hover"
         android:visibility="gone" />
 
 </LinearLayout>

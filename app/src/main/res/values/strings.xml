@@ -55,5 +55,15 @@
     <string name="video_char">视频聊天</string>
     <string name="text_char">发起会话</string>
 
+    <string name="connect_not_invalid">网络连接不可用</string>
+    <string name="layout_dialog_loading">正在加载</string>
+
+    <string name="is_delete_chat_record">确定删除聊天记录吗</string>
+    <string name="delete_chat_record">清除聊天记录</string>
+    <string name="chat_infomation">聊天信息</string>
+    <string name="find_chat_record">查找聊天记录</string>
+    <string name="message_no_disturbing">消息免打扰</string>
+    <string name="message_top">会话置顶</string>
+
 
 </resources>

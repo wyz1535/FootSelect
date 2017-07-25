@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroup"
+    android:orientation="vertical"
+    tools:context="com.leyifu.makefriend.activity.ChatInfomationActivity">
+
+    <include layout="@layout/me_head" />
+
+    <TextView
+        android:id="@+id/tv_find_chat_record"
+        style="@style/textViewStyle"
+        android:layout_marginTop="@dimen/mar_top"
+        android:text="@string/find_chat_record" />
+
+    <TextView
+        android:id="@+id/tv_message_no_disturbing"
+        style="@style/textViewStyle"
+        android:layout_marginTop="@dimen/mar_top"
+        android:text="@string/message_no_disturbing" />
+
+    <LinearLayout style="@style/devidesLines" />
+
+    <TextView
+        android:id="@+id/tv_message_top"
+        style="@style/textViewStyle"
+        android:text="@string/message_top" />
+
+    <LinearLayout style="@style/devidesLines" />
+
+    <TextView
+        android:id="@+id/clear_chat_record"
+        style="@style/textViewStyle"
+        android:text="@string/delete_chat_record" />
+
+</LinearLayout>

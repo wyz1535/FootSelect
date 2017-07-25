@@ -7,35 +7,35 @@
 
     <include layout="@layout/head_main" />
 
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_not_connect"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/head"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:background="@color/connect_not_invalid"-->
+        <!--android:orientation="horizontal"-->
+
+        <!--&gt;-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:src="@mipmap/ic_launcher" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:text="@string/connect_not_invalid" />-->
+    <!--</LinearLayout>-->
+
     <FrameLayout
         android:id="@+id/fragment_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"></FrameLayout>
+        android:layout_weight="1" />
 
     <include layout="@layout/footer_main" />
-
-    <!--activity中放置多个fragment-->
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="vertical">-->
-
-    <!--<fragment-->
-    <!--android:id="@+id/fg_001"-->
-    <!--android:name="com.leyifu.footselect.fragment.ContactsFragment"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_weight="1"-->
-    <!--tools:layout="@layout/fragment_contacts" />-->
-
-    <!--<fragment-->
-    <!--android:id="@+id/fg_002"-->
-    <!--android:name="com.leyifu.footselect.fragment.LacationFragment"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_weight="1"-->
-    <!--tools:layout="@layout/fragment_lacation" />-->
-    <!--</LinearLayout>-->
 
 </LinearLayout>
